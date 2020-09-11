@@ -40,3 +40,15 @@ def move(board, index, token = "X")
   board[index] = token
   board
 end
+
+def turn(board)
+  puts "Please enter 1-9:"
+  number = gets.chomp
+  index = input_to_index(number)
+  if valid_move?(board, index) == true
+    move(board, index)
+    display_board(board)
+  else
+    turn(board)
+  end
+end
