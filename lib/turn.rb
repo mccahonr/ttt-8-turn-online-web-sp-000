@@ -11,3 +11,11 @@ def input_to_index(user_input)
   index -= 1
   index
 end
+
+def valid_move?(board, index)
+  if board[index] == " " || board[index] == "" || board[index] == nil
+    true
+  else
+    false
+  end
+end
